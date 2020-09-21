@@ -25,7 +25,7 @@ trait DataStructures {
         case Some(i) => "tempC=" + i
         case None => ""
       }, bme680.this.pressureInHg match {
-        case Some(i) => "inches=" + i
+        case Some(i) => "pressureInHg=" + i
         case None => ""
       }, bme680.this.altitudeMeters match {
         case Some(i) => "altitude=" + i

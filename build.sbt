@@ -5,7 +5,7 @@ organization := "com.urdnot.iot"
 
 name := "iotKafkaOutsideBme680"
 
-version := "2.0.1"
+version := "2.0.2"
 
 // Docker image name:
 packageName := s"${name.value.toLowerCase}"

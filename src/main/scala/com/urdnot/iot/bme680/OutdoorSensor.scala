@@ -13,7 +13,6 @@ import akka.stream.scaladsl.Sink
 import com.typesafe.config.Config
 import com.typesafe.scalalogging.{LazyLogging, Logger}
 import org.apache.kafka.common.serialization.{ByteArrayDeserializer, StringDeserializer}
-
 import scala.concurrent.ExecutionContextExecutor
 import scala.util.{Failure, Success}
 
@@ -47,6 +46,7 @@ object OutdoorSensor extends LazyLogging with DataStructures  {
                 case Success(dataOptional) =>
                   dataOptional match {
                     case Some(data) =>
+                      // log.info(data)
                       Http().singleRequest(HttpRequest(
                         method = HttpMethods.POST,
                         uri = Uri(INFLUX_URL).withQuery(
